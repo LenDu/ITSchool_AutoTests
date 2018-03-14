@@ -14,6 +14,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest() throws Exception {
+        Thread.sleep(1000);
         app.login.loginValidUser();
         Assert.assertEquals(app.afterLogin.getUserEmail(), validUser.getEmail());
     }

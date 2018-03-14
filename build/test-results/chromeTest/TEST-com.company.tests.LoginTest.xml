@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.company.tests.LoginTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2018-03-12T20:05:04" hostname="DESKTOP-TVQM3NO" time="7.698">
+<testsuite name="com.company.tests.LoginTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2018-03-14T23:36:14" hostname="DESKTOP-TVQM3NO" time="8.597">
   <properties/>
-  <testcase name="loginTest" classname="com.company.tests.LoginTest" time="1.755"/>
-  <testcase name="sendMailTest" classname="com.company.tests.LoginTest" time="5.941">
+  <testcase name="loginTest" classname="com.company.tests.LoginTest" time="2.804"/>
+  <testcase name="sendMailTest" classname="com.company.tests.LoginTest" time="5.792">
     <failure message="java.lang.AssertionError: expected [РџРёСЃСЊРјРѕ СѓСЃРїРµС‰РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ Р°РґСЂРµСЃР°С‚Р°Рј] but found [Письмо успешно отправлено адресатам]" type="java.lang.AssertionError">java.lang.AssertionError: expected [РџРёСЃСЊРјРѕ СѓСЃРїРµС‰РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ Р°РґСЂРµСЃР°С‚Р°Рј] but found [Письмо успешно отправлено адресатам]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
@@ -10,7 +10,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
 	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.company.tests.LoginTest.sendMailTest(LoginTest.java:26)
+	at com.company.tests.LoginTest.sendMailTest(LoginTest.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

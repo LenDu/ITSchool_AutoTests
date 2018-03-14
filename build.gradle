@@ -40,3 +40,13 @@ task ieTest(type:Test) {
         suites "testing.xml"
     }
 }
+
+task remoteTest(type:Test) {
+    systemProperty "driver", "remote"
+
+    useTestNG {
+        suites "testing.xml"
+    }
+}
+
+
