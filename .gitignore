@@ -1,17 +1,17 @@
 # Gradle
-        # ------
-        .gradle
-        /build
-        /buildSrc/build
-        /buildSrc/subprojects/*/build
+# ------
+.gradle
+/build
+/buildSrc/build
+/buildSrc/subprojects/*/build
 /subprojects/*/build
-        /subprojects/docs/src/samples/*/*/build
-        /subprojects/internal-android-performance-testing/build-android-libs
+/subprojects/docs/src/samples/*/*/build
+/subprojects/internal-android-performance-testing/build-android-libs
 
-        # IDEA
-        # ----
-        .idea
-        .shelf
+# IDEA
+# ----
+.idea
+.shelf
 /*.iml
 /*.ipr
 /*.iws
@@ -22,9 +22,9 @@
 /buildSrc/*.iws
 /buildSrc/out
 /buildSrc/subprojects/*/*.iml
-        /buildSrc/subprojects/*/out
+/buildSrc/subprojects/*/out
 /out
 /subprojects/*/*.iml
-        /subprojects/*/out
+/subprojects/*/out
 /.teamcity/*.iml
 /.teamcity/target
