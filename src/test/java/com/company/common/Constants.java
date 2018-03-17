@@ -5,5 +5,5 @@ package com.company.common;
  */
 public class Constants {
     public static final String BASE_URL = "http://www.i.ua/";
-    public static final String confirmationMassageRU = "Письмо успещно отправлено адресатам";
+    public static final String confirmationMassageRU = "Письмо успешно отправлено адресатам";
 }

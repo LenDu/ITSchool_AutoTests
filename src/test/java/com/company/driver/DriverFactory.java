@@ -36,9 +36,9 @@ public class DriverFactory {
             driver = new InternetExplorerDriver();
         } else if ("remote".equals(property)) {
             try {
-                DesiredCapabilities caps = DesiredCapabilities.chrome();
-                caps.setCapability("platform", "Windows XP");
-                caps.setCapability("version", "43.0");
+                DesiredCapabilities caps = DesiredCapabilities.firefox();
+                caps.setCapability("platform", "Windows 7");
+                caps.setCapability("version", "57.0");
                 driver = new RemoteWebDriver(new URL(URL), caps);
             } catch (MalformedURLException e) {
                 e.printStackTrace();

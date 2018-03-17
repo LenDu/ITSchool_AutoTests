@@ -9,7 +9,17 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+
+    agent
+
+}
+
+
 dependencies {
+    agent "org.aspectj:aspectjweaver:1.8.0"
+    testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0"
+
     // https://mvnrepository.com/artifact/org.testng/testng
     testCompile group: 'org.testng', name: 'testng', version: '6.14.2'
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server
@@ -17,8 +27,16 @@ dependencies {
 
 }
 
+
+test.doFirst {
+
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+
+}
+
 task chromeTest(type:Test){
     systemProperty "driver", "chrome"
+    testLogging.showStandardStreams = true
 
     useTestNG{
         suites "testing.xml"
