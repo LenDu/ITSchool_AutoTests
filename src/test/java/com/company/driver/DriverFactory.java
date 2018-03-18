@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -22,18 +22,18 @@ public class DriverFactory {
     public static final String ACCESS_KEY = "4070d4e1-2955-4f51-9445-ab15d55aee11";
     public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80";
 
-    public static WebDriver getDriver()  {
+    public static WebDriver getDriver() {
         String property = System.getProperty("driver");
 
         if ("firefox".equals(property)) {
             System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-            driver = new FirefoxDriver();
-        } else if ("chrome".equals(property)){
+            DriverFactory.driver = new FirefoxDriver();
+        } else if ("chrome".equals(property)) {
             System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-            driver = new ChromeDriver();
+            DriverFactory.driver = new ChromeDriver();
         } else if ("ie".equals(property)) {
             System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
-            driver = new InternetExplorerDriver();
+            DriverFactory.driver = new InternetExplorerDriver();
         } else if ("remote".equals(property)) {
             try {
                 DesiredCapabilities caps = DesiredCapabilities.firefox();
@@ -45,12 +45,13 @@ public class DriverFactory {
             }
         }
 
-
-            driver.get(Constants.BASE_URL);
-            //set a window size
-            // driver.manage().window().maximize();
-            //set timeout for searching each element during 10 seconds
-            //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            return driver;
-        }
+        //set timeout for searching each element during 10 seconds
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        DriverFactory.driver.get(Constants.BASE_URL);
+        //set a window size
+        DriverFactory.driver.manage().window().maximize();
+        //            driver.manage().timeouts().pageLoadTimeout();
+//            driver.manage().timeouts().setScriptTimeout();
+        return DriverFactory.driver;
     }
+}
