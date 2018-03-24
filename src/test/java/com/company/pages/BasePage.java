@@ -2,6 +2,7 @@ package com.company.pages;
 
 import com.company.driver.DriverFactory;
 import com.company.driver.MyDriver;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,6 +14,7 @@ import java.net.MalformedURLException;
  * Created by Lena on 3/8/2018.
  */
 public class BasePage {
+    protected Logger log = Logger.getLogger(this.getClass().getSimpleName());
     protected static MyDriver driver = MyDriver.getMyDriver();
     protected  static WebDriverWait wait= new WebDriverWait(driver,10);
 

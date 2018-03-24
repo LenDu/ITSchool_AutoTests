@@ -18,8 +18,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class DriverFactory {
     public static WebDriver driver;
-    public static final String USERNAME = "elena.duplik";
-    public static final String ACCESS_KEY = "4070d4e1-2955-4f51-9445-ab15d55aee11";
+    public static final String USERNAME = "len_ex";
+    public static final String ACCESS_KEY = "a73e7601-e8d2-4e53-84da-20b4a1e65389";
     public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80";
 
     public static WebDriver getDriver() {
