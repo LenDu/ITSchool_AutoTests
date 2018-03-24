@@ -34,7 +34,7 @@ public class MyDriver implements WebDriver {
 
     @Override
     public String getCurrentUrl() {
-        return getCurrentUrl();
+        return driver.getCurrentUrl();
     }
 
     @Override

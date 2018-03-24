@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class DriverFactory {
     public static WebDriver driver;
-    public static final String USERNAME = "len_ex";
-    public static final String ACCESS_KEY = "a73e7601-e8d2-4e53-84da-20b4a1e65389";
-    public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80";
+    public static final String USERNAME = "elena.duplik";
+    public static final String ACCESS_KEY = "4070d4e1-2955-4f51-9445-ab15d55aee11";
+    public static final String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
 
     public static WebDriver getDriver() {
         String property = System.getProperty("driver");
@@ -36,9 +36,9 @@ public class DriverFactory {
             DriverFactory.driver = new InternetExplorerDriver();
         } else if ("remote".equals(property)) {
             try {
-                DesiredCapabilities caps = DesiredCapabilities.firefox();
-                caps.setCapability("platform", "Windows 7");
-                caps.setCapability("version", "57.0");
+                DesiredCapabilities caps = DesiredCapabilities.chrome();
+                caps.setCapability("platform", "Windows 10");
+                caps.setCapability("version", "latest");
                 driver = new RemoteWebDriver(new URL(URL), caps);
             } catch (MalformedURLException e) {
                 e.printStackTrace();

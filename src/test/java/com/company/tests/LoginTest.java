@@ -24,6 +24,9 @@ public class LoginTest extends BaseTest {
         app.afterLogin.makeNewMessage();
         app.newMail.sendNewMail();
         Thread.sleep(1000);
+
+        //Assert.assertEquals(app.afterSendMail.getConfirmationMessage(), Constants.confirmationMassageRU);
+       // Assert.assertEquals(app.afterSendMail.getConfirmationMessage(), Constants.confirmationMassageRU);
         Assert.assertEquals(app.afterSendMail.getConfirmationMessage(), Constants.confirmationMassageRU);
     }
 
